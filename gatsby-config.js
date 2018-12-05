@@ -5,6 +5,14 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     {
+      resolve: `gatsby-source-graphcms`,
+      options: {
+        endpoint: `https://api-euwest.graphcms.com/v1/cjpa3dpw90mgv01exr2iiru13/master`,
+        token: `eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2ZXJzaW9uIjoxLCJ0b2tlbklkIjoiNTE5OGVkNzUtZTI5MS00NTY3LTk3YjQtZmI4NTYxYzUyM2I5In0.eyMKRxKJlWblcGYImZ7Hug-yEMBeeDdgDY1Mg0duGck`,
+        query: require('./gatsby/projectsQuery'),
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
